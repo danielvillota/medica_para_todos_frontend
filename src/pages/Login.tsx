@@ -1,37 +1,50 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 function Login(){
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
 
-    const handleSubmit = async(event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
-
-        const response = await fetch("http://127.0.0.1:8000/api/autenticacion/login/", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                email: email,
-                password: password,
-            }),
-        });
+    const iniciarSesion = async () => {
+        const response = await fetch(
+            "http://127.0.0.1:8000/api/autenticacion/login/",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    email: email,
+                    password: password,
+                }),
+            }
+        );
 
         const data = await response.json();
 
-        if (response.ok) {
-            localStorage.setItem("access_token", data.access);
-            localStorage.setItem("refresh_token", data.refresh);
-
-            console.log("Tokens guardados");
-
-            navigate("/home");
-        } else {
-            console.log("Error en el login:", data);
+        if (!response.ok) {
+            throw new Error(data.detail || "Error al iniciar sesión");
         }
+
+        localStorage.setItem("access_token", data.access);
+        localStorage.setItem("refresh_token", data.refresh);
+
+        navigate("/home");
+    };
+
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+
+        toast.promise(
+            iniciarSesion(),
+            {
+                loading: "Iniciando sesión...",
+                success: <b>¡Inicio de sesión exitoso!</b>,
+                error: <b>Credenciales incorrectas.</b>,
+            }
+        );
     };
 
     return(

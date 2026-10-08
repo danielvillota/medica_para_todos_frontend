@@ -1,0 +1,13 @@
+.asesores-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.lista-asesores {
+    flex: 1;
+}
+
+.formulario-asesor {
+    width: 350px;
+}
