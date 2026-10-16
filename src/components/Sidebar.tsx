@@ -19,7 +19,7 @@ function Sidebar() {
                     <li>Inicio</li>
                     <li>Usuarios</li>
                     <li><Link to="/asesores">Asesores</Link></li>
-                    <li>Clientes</li>
+                    <li><Link to="/papelerias">Papeleria</Link></li>
                     <li>Afiliaciones</li>
                 </ul>
             </nav>
