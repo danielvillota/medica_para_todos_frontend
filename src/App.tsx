@@ -6,6 +6,8 @@ import Asesores from './pages/Asesores'
 import Layout from './layouts/Layout'
 import './App.css'
 import { Toaster } from "react-hot-toast";
+import Papeleria from './pages/papeleria/Papelerias';
+
 function App() {
 
   return (
@@ -16,6 +18,7 @@ function App() {
           <Route element={<ProtectedRoute><Layout /></ProtectedRoute>}>
             <Route path='/home' element={<Home/>}/>
             <Route path='/asesores' element={<Asesores/>}/>
+            <Route path='/papelerias' element={<Papeleria/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

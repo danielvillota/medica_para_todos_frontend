@@ -1,0 +1,13 @@
+.papeleria-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.lista-papeleria {
+    flex: 1;
+}
+
+.formulario-papeleria {
+    width: 350px;
+}
