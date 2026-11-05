@@ -1,0 +1,122 @@
+
+.afiliaciones-edicion {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.afiliaciones-listado,
+.afiliacion-formulario {
+  min-width: 0;
+}
+
+.afiliacion-formulario {
+  padding: 18px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.afiliacion-formulario h4 {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.afiliacion-formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.afiliacion-formulario label {
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+.afiliacion-formulario input,
+.afiliacion-formulario select {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  padding: 9px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.formulario-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.formulario-acciones button,
+.afiliaciones-listado table button {
+  padding: 9px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.formulario-acciones button:disabled,
+.afiliaciones-listado table button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.formulario-placeholder {
+  color: #666;
+}
+
+.mensaje-error {
+  color: #b42318;
+  overflow-wrap: anywhere;
+}
+
+.mensaje-exito {
+  color: #187847;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 900px) {
+  .afiliaciones-edicion {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.acciones-afiliacion {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.acciones-afiliacion .boton-desactivar {
+  color: #b42318;
+  border-color: #f0b8b4;
+}
+
+.acciones-afiliacion .boton-desactivar:hover {
+  background-color: #fff1f0;
+}
+
+.detalle-fila-titular {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+
+.detalle-fila-titular > * {
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .detalle-fila-titular {
+    grid-template-columns: 1fr;
+  }
+}
