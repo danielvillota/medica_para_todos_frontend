@@ -4,6 +4,7 @@ import DatosTitular from "./detalle/DatosTitular";
 import './AfiliacionDetalle.css'
 import AfiliacionesTitular from "./detalle/AfiliacionesTitular";
 import ActualizarTitular from "./detalle/ActualizarTitular";
+import BeneficiarioDetalle from "../beneficiario/BeneficiarioDetalle";
 
 const API_URL = "http://127.0.0.1:8000/api";
 
@@ -76,6 +77,10 @@ function AfiliacionDetalle(){
             <div className="detalle-fila-titular">
                 <DatosTitular idTitular={afiliacion.id_titular} actualizacion={actualizacionTitular} />
                 <ActualizarTitular idTitular={afiliacion.id_titular} alActualizar={() =>setActualizacionTitular((actual) => actual + 1)}/>
+            </div>
+                <BeneficiarioDetalle idTitular={afiliacion.id_titular}/>
+            <div>
+                
             </div>
 
             <div className="detalle-fila">

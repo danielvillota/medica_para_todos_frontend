@@ -10,6 +10,7 @@ import Papeleria from './pages/papeleria/Papelerias';
 import Afiliaciones from './pages/afiliacion/Afiliacion';
 import AfiliacionRegistro from './components/afiliacion/AfiliacionRegistro'
 import AfiliacionDetalle from './components/afiliacion/AfiliacionDetalle'
+import BeneficiariosLista from './components/beneficiario/BeneficiariosLista'
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
             <Route path='/afiliaciones' element={<Afiliaciones/>}/>
             <Route path='/afiliaciones/crear' element={<AfiliacionRegistro/>}/>
             <Route path='/afiliaciones/:id' element={<AfiliacionDetalle/>}/>
+            <Route path='/beneficiarios' element={<BeneficiariosLista/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
