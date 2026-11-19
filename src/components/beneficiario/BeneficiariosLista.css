@@ -1,0 +1,67 @@
+
+.beneficiarios-lista {
+    width: 100%;
+}
+
+.filtro-beneficiarios {
+    display: flex;
+    align-items: end;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.filtro-beneficiarios .form-group {
+    flex: 1;
+}
+
+.filtro-beneficiarios input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tabla-contenedor table {
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap;
+}
+
+.tabla-contenedor th,
+.tabla-contenedor td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabla-contenedor th {
+    background-color: #f2f2f2;
+}
+
+.paginacion-beneficiarios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.paginacion-beneficiarios button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.mensaje-error {
+    color: #d32f2f;
+}
+
+@media (max-width: 768px) {
+    .filtro-beneficiarios {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

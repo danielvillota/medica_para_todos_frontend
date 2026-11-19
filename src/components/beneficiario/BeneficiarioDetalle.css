@@ -1,0 +1,36 @@
+.titulo-seccion{
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.beneficiarios-contenedor {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  align-items: start;
+  margin-top: 20px;
+}
+
+.beneficiarios-listado,
+.beneficiarios-formulario {
+  min-width: 0;
+}
+
+.beneficiarios-formulario {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.beneficiarios-formulario h4 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .beneficiarios-contenedor {
+    grid-template-columns: 1fr;
+  }
+}

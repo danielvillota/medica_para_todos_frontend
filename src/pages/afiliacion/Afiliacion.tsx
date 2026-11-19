@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import AfiliacionRegistro from "../../components/afiliacion/AfiliacionRegistro";
+import './Afiliacion.css'
 
 interface Afiliacion {
   id: number;
